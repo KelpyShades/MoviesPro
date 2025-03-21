@@ -102,7 +102,7 @@ function displayMovieData(movie) {
     posterContainer.className = 'poster-container';
     
     const poster = document.createElement('img');
-    poster.src = movie.Poster !== 'N/A' ? movie.Poster : '/default.png';
+    poster.src = movie.Poster !== 'N/A' ? movie.Poster : 'images/default.png';
     poster.alt = `${movie.Title} poster`;
     posterContainer.appendChild(poster);
     

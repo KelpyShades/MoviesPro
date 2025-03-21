@@ -8,7 +8,7 @@
 
 /* Background with full-page cover image */
 body {
-    background-image: url("/bg.jpg");
+    background-image: url("images/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #f0f2f5; /* Fallback color */
@@ -176,7 +176,7 @@ h1 {
     
     /* Different background image for mobile */
     body {
-        background-image: url("/bg-sm.png");
+        background-image: url("images/bg-sm.png");
     }
     
     /* Vertical form on mobile */
