@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- HTML5 document with English language setting -->
+<html lang="en">
+<head>
+    <!-- Essential meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title that appears in browser tab -->
+    <title>Movie Search App</title>
+    
+    <!-- Link to custom CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts: Poppins (various weights) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for search icon and other icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Main container with glassmorphism effect -->
+    <div class="container">
+        <!-- App title -->
+        <h1>Movie Search</h1>
+        
+        <!-- App description -->
+        <p class="subtitle">Search for your favorite movies using the OMDB API</p>
+        
+        <!-- Search input and button -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search for movies...">
+            <button id="searchButton"><i class="fas fa-search"></i> Search</button>
+        </div>
+        
+        <!-- Loading spinner (hidden by default) -->
+        <div id="loadingIndicator" class="loading-indicator hidden">
+            <div class="spinner"></div>
+            <p>Searching for movie...</p>
+        </div>
+        
+        <!-- Empty container where movie results will be injected by JavaScript -->
+        <!-- Results will be displayed here -->
+    </div>
+    
+    <!-- Link to JavaScript file that handles API calls and DOM manipulation -->
+    <script src="script.js"></script>
+</body>
+</html> 

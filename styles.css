@@ -1,0 +1,227 @@
+/* Basic CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Background with full-page cover image */
+body {
+    background-image: url("/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #f0f2f5; /* Fallback color */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+/* Glassmorphism effect for main container */
+.container {
+    text-align: center;
+    padding: 2rem;
+    
+    /* Key glassmorphism properties */
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Typography */
+h1 {
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    color: #d8d8d8;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+/* Search form styling */
+.search-box {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#searchInput {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    width: 70%;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#searchInput:focus {
+    border-color: #007bff;
+}
+
+#searchButton {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#searchButton:hover {
+    background-color: #0056b3;
+}
+
+/* Movie Results Layout */
+#resultsContainer {
+    text-align: left;
+    margin-top: 2rem;
+}
+
+/* Flexbox card layout for movie results */
+.movie-card {
+    display: flex;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.poster-container {
+    flex: 0 0 auto; /* Fixed width, doesn't grow or shrink */
+    width: 200px;
+}
+
+.poster-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintains aspect ratio without distortion */
+}
+
+.movie-details {
+    flex: 1; /* Takes up remaining space */
+    padding: 1.5rem;
+}
+
+.movie-details h2 {
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.sub-info {
+    margin-bottom: 1rem;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.rated {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    background: #f0f0f0;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.plot {
+    margin: 1rem 0;
+    line-height: 1.6; /* Improves readability */
+}
+
+.rating {
+    margin-top: 1rem;
+}
+
+.imdb-rating {
+    font-weight: bold;
+    color: #ff9900; /* IMDB's gold color */
+}
+
+/* Error states */
+.error-message {
+    padding: 1rem;
+    background-color: #fff3f3;
+    border-left: 4px solid #ff5252; /* Left border for visual impact */
+    color: #d32f2f;
+    border-radius: 4px;
+}
+
+/* Responsive design breakpoints */
+@media (max-width: 768px) {
+    /* Stack layout on mobile instead of side-by-side */
+    .movie-card {
+        flex-direction: column;
+    }
+    
+    .poster-container {
+        width: 100%;
+        height: 300px;
+    }
+    
+    /* Different background image for mobile */
+    body {
+        background-image: url("/bg-sm.png");
+    }
+    
+    /* Vertical form on mobile */
+    .search-box {
+        flex-direction: column;
+    }
+
+    #searchInput {
+        width: 100%;
+    }
+}
+
+/* Loading indicator and animation */
+.loading-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.loading-indicator p {
+    margin-top: 1rem;
+    color: #666;
+}
+
+/* CSS animation for the loading spinner */
+.spinner {
+    width: 40px;
+    height: 40px;
+    /* Creates a circle with transparent border */
+    border: 4px solid rgba(0, 123, 255, 0.1);
+    /* Makes only the left border colored to create spinning effect */
+    border-left-color: #007bff;
+    border-radius: 50%;
+    /* Continuous rotation animation */
+    animation: spin 1s linear infinite;
+}
+
+/* Rotation keyframe animation - creates circular motion */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Utility class to toggle visibility */
+.hidden {
+    display: none;
+} 
