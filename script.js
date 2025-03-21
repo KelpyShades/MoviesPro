@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* API configuration for OMDB (Open Movie Database) */
 const apiKey = 'a0107aec';
-const apiUrl = 'http://www.omdbapi.com/';
+const apiUrl = 'https://www.omdbapi.com/';
 
 /* Fetch movie data from the OMDB API */
 async function fetchMovie(title) {
